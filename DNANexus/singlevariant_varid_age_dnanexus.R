@@ -22,14 +22,16 @@ cat('\nReading in packages for analysis...\n')
 
 singlevariant<-function(num,gdsfile,varfile=NULL,varidfile,phenfile,nullfile,stat="Score",outfile,mcount=10){
 
+######
+###### read gds file
+gds <- seqOpen(gdsfile, allow.duplicate=T)
+
+
 ##### samples
 phen1<-fread(phenfile,header=T,data.table=F,sep="\t")
 names(phen1)[1]<-"sample.id"
 samid0<-phen1$sample.id
 
-######
-###### read gds file
-gds <- seqOpen(gdsfile, allow.duplicate=T)
 
 ######
 ###### QCed variants
