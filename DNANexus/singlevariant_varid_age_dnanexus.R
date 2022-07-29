@@ -11,11 +11,14 @@ outfile=as.character(args[6])
 stats="Score"
 #####
 ##### single variant association tests
-library(SeqArray)
-library(SeqVarTools)
-library(data.table)
-library(GENESIS)
-library(GWASTools)
+#library(SeqArray)
+#library(SeqVarTools)
+#library(data.table)
+#library(GENESIS)
+#library(GWASTools)
+
+cat('\nReading in packages for analysis...\n')
+.libPaths(c("rpackages4_1_3",.libPaths()))
 
 singlevariant<-function(num,gdsfile,varfile=NULL,varidfile,phenfile,nullfile,stat="Score",outfile,mcount=10){
 
