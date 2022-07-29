@@ -23,7 +23,7 @@ cat('\nReading in packages for analysis...\n')
 .libPaths(c("rpackages4_1_3",.libPaths()))
 
 source("UKBB_200KWES_CVD/GENESIS_adaptation_source.R")
-source("TOPMed_AFib_pipeline/DNANexus/singlevariant_modfied.R")
+source("TOPMed_AFib_pipeline/DNANexus/singlevariant_modified.R")
 print(num)
 
 #perform test
